@@ -1,0 +1,14 @@
+#title{
+    color:white;
+}
+#title > h5 {
+    font-size: 35px;
+}
+
+#role > i{
+    padding-right: 5px;
+}
+
+#role{
+    font-size: 20px;
+}
