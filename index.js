@@ -43,7 +43,7 @@ function promptUser(answers) {
             ]).then((engineerRes) => {
                 var newEngineer = new Engineer(engineerRes.name, uniqueId, engineerRes.email, engineerRes.github);
                 uniqueId++;
-                console.log(newEngineer);
+                //console.log(newEngineer);
                 teamArray.push(newEngineer);
                 addUser();
                 
@@ -69,7 +69,7 @@ function promptUser(answers) {
             ]).then((internRes) => {
                 var newIntern = new Intern(internRes.name, uniqueId, internRes.email, internRes.school);
                 uniqueId++;
-                console.log(newIntern)
+                //console.log(newIntern)
                 teamArray.push(newIntern);
                 addUser();
             });
@@ -93,7 +93,7 @@ function promptUser(answers) {
             ]).then((managerRes) => {
                 var newManager = new Manager(managerRes.name, uniqueId, managerRes.email, managerRes.office);
                 uniqueId++;
-                console.log(newManager);
+                //console.log(newManager);
                 teamArray.push(newManager);
                 addUser();
             });
@@ -105,16 +105,6 @@ function promptUser(answers) {
         });
 
 };
-
-function gen(){
-    generateHTML(teamArray)
-    .then(pageHTML => { 
-        return writeFile(pageHTML); 
-    })
-    .then(writeFileResponse => {
-         return copyFile();
-    });
-}
 
 function addUser(){
     inquirer.prompt([
@@ -128,13 +118,15 @@ function addUser(){
         if(confirmRes.continue){
             return promptUser();
         } else {
-            //return gen();
-            console.log(teamArray);
-            return writeFile(generateHTML(teamArray));
+            //console.log(teamArray);
+            return writeFile(generateHTML(teamArray))
+            .then(writeFileResponse => {
+                return copyFile();
+            });;
         }
     });
 
-    console.log(teamArray);
+    //console.log(teamArray);
 };
 
 promptUser()
