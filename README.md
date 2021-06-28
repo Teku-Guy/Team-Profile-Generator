@@ -14,8 +14,6 @@ summaries for each person.
 
 ## Table of Contents
 
-* [Video Demo](##Video-Demo)
-
 * [User Story](##User-Story)
 
 * [Usage](##Usage)

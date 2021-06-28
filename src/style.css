@@ -12,3 +12,12 @@
 #role{
     font-size: 20px;
 }
+
+.team-heading{
+    background-color: #0d6efd;
+    color:white;
+}
+
+.team-area{
+    justify-content: space-between;
+}

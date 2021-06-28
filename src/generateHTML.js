@@ -6,7 +6,7 @@ function generateManager(manager){
         <div class="card"> 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.email}" target="_blank">${manager.email}</a></li>
                 <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
             </ul>
         </div>
@@ -21,8 +21,8 @@ function generateEnginner(engineer){
         <div class="card"> 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${engineer.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.email}" target="_blank">${engineer.email}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
             </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@ function generateIntern(intern){
         <div class="card"> 
              <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${intern.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.email}" target="_blank">${intern.email}</a></li>
                 <li class="list-group-item">School: ${intern.school}</li>
             </ul>
         </div>
@@ -121,14 +121,14 @@ function generateHTML(templateData) {
         <link href="./style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="container-fluid">
+        <header class="container-fluid py-4 team-heading">
             <div class="row">
-                <div class="col-12 jumbotron mb-3 team-heading">
+                <div class="col-12">
                     <h1 class="text-center">My Team</h1>
                 </div>
             </div>
         </header>
-        <main class="container">
+        <main class="container pt-4">
             <div class="row"> 
                 <div class="team-area col-12 d-flex justify-content-center">
                     ${generateEmployees(templateData)}
