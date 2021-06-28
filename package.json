@@ -4,7 +4,7 @@
   "description": "Week 10 UCLA Bootcamp Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
